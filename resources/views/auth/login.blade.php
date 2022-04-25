@@ -3,7 +3,7 @@
 @section('content')
 
 //書き込み
-{!! Form::open(['url' => '/post']) !!}
+{!! Form::open(['url' => '/top']) !!}
 
 <p>DAWNSNSへようこそ</p>
 
