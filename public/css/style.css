@@ -1,8 +1,5 @@
 @charset "utf-8";
-html{
-}
-body{
-}
+
 /* header */
 header{
     background:#3C4767;
@@ -20,3 +17,56 @@ header{
     flex: 0 0 19%;
     border-left: 1px solid #6C6C6C;
 }
+
+.update_form{
+    display:none;
+}
+
+.pull_dawn{
+  position: absolute;
+  top: 30px;
+  left:1000px;
+  bottom: 0;
+  border-bottom: 2px solid #c0c0c0;
+  transform: rotate(45deg); /* コンテンツを回転させる */
+  display: flex;
+  width: 20px;
+  height: 20px;
+  border-right: 2px solid #c0c0c0;
+  cursor: pointer; /* マウスオン時に表示されるカーソルの形 */
+  z-index: 10; /* コンテンツの重ね順 1が後ろで9999が前 */
+}
+
+/*  回転した後の記号 上の矢印 */
+.pull_dawn.active {
+  transform: rotate(225deg);
+}
+
+.g-navi {
+    display: block;
+    position: fixed;
+    left: 950px;
+    z-index: 1;
+    top: 70px;
+    transform: translateY(-100%);
+    transition: .5s ease-in-out;
+    height: 100vh;
+  }
+
+  .g-navi ul{
+    display: block;
+  }
+
+  .g-navi.active{
+    transform: translateY(0%);
+    transition: .5s ease-in-out;
+  }
+
+  .head{
+    display:flex;
+    justify-content: flex-end;
+  }
+
+  .userseach{
+    display:flex;
+  }

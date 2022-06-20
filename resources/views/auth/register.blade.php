@@ -3,10 +3,10 @@
 @section('content')
 
 
-//書き込み
+
 {!! Form::open(['url' => '/register']) !!}
 
-<h2>新規ユーザー登録</h2>
+<h1>新規ユーザー登録</h1>
 
 {{ Form::label('ユーザー名') }}
 {{ Form::text('username',null,['class' => 'input']) }}
@@ -21,13 +21,13 @@
 @endif
 
 {{ Form::label('パスワード') }}
-{{ Form::text('password',null,['class' => 'input']) }}
+{{ Form::password('password',null,['class' => 'input']) }}
 @if($errors->has('password'))
 {{$errors->first('password')}}
 @endif
 
 {{ Form::label('パスワード確認') }}
-{{ Form::text('password_confirmation',null,['class' => 'input']) }}
+{{ Form::password('password_confirmation',null,['class' => 'input']) }}
 
 {{ Form::submit('登録') }}
 
